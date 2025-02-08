@@ -1,0 +1,89 @@
+/* Scoped to Services component only */
+.services-section {
+  text-align: center;
+  padding: 2.5rem;
+  background-image: url('/background1.jpg'); /* Add your background image path here */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Semi-transparent overlay for the service section */
+.services-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay for the section */
+  border-radius: 8px;
+  z-index: -1;
+}
+
+/* Heading for the section */
+.services-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.services-description {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* Grid layout for service cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.services-grid .service-card {
+  background-color: rgba(0, 0, 0, 0.3); /* Dark transparent background to match section */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+}
+
+.services-grid .service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Service title */
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph inside service cards */
+.services-grid .service-card p {
+  font-size: 1rem;
+  color: #d1d5db; /* Light gray text color for paragraph */
+  line-height: 1.6;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
