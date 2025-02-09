@@ -1,0 +1,83 @@
+/* Scoped to About Us component only */
+.about-section {
+    text-align: center;
+    padding: 2.5rem;
+    background-image: url('/background1.jpg'); /* Add your background image path here */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Semi-transparent overlay for the About Us section */
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay for the section */
+    border-radius: 8px;
+    z-index: -1;
+}
+
+/* Heading for the About Us section */
+.about-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+/* Description paragraph for About Us */
+.about-description {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Developer image container */
+.developer-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.developer-img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Our Values heading */
+.about-values-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+/* List for values (No dots) */
+.about-values-list {
+    list-style: none; /* Removed the default list dots */
+    margin-left: 2rem;
+    color: #d1d5db;
+}
+
+.about-values-list li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .about-values-list {
+        margin-left: 1rem;
+    }
+}

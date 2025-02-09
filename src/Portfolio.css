@@ -1,0 +1,157 @@
+/* Reset & Full-Height Setup */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Full-Height Background */
+.portfolio-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: url('/background1.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh; /* Ensures full height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Enables scrolling */
+}
+
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Projects Section */
+.projects-section {
+  width: 100%;
+  max-width: 1200px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; /* Allows more content visibility */
+  overflow-y: auto; /* Enables scrolling if needed */
+}
+
+/* Responsive Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  width: 100%;
+  max-height: 65vh; /* Allows more items on mobile */
+  overflow-y: auto; /* Enables scrolling within the grid */
+}
+
+/* Project Card */
+.project-card {
+  background: rgba(40, 44, 52, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Project Title */
+.project-card h3 {
+  color: #61dafb;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+/* Project Description */
+.project-card p {
+  font-size: 0.9rem;
+  color: #dcdcdc;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Project Link */
+.project-card a {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project-card a:hover {
+  background: linear-gradient(45deg, #ff5722, #e64a19);
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 1rem;
+  margin-top: auto;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 30px 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .projects-section {
+    min-height: auto;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    max-height: 75vh; /* More space for mobile */
+  }
+
+  .footer {
+    font-size: 0.9rem;
+  }
+}
